@@ -1,0 +1,7 @@
+# DIRS
+node_modules/
+.vscode/
+src/
+
+# Settings Files
+rollup.config.js
