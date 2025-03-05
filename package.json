@@ -1,15 +1,17 @@
 {
   "name": "nidea-react-image-previewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "publish": "rm -rf ./dist/ && mkdir dist && rollup -c"
+  },
   "dependencies": {
     "nidea-image-previewer-core": "^1.0.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.2",

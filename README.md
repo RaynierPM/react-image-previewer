@@ -1,59 +1,39 @@
-# React Image Previewer
+# Nidea React Image Viewer
 
-A React-based image previewer built with Vite. This project allows users to upload images and preview them on a canvas with interactive features.
+The React wrapper simplifies integration by providing context-based API access.
 
-## Features
+This wrapper is based on this [package](https://npmjs.com/package/nidea-image-previewer-core).
 
-- Image upload and preview
-- Zoom in and zoom out functionality
-- Move image within the canvas
-- Support for multiple image formats (JPEG, PNG, GIF, etc.)
-- Lightweight and fast using Vite
+### Usage
 
-## Getting Started
+```jsx
+import ImagePreviewer from "nidea-image-previewer-core/react";
 
-### Prerequisites
-
-Make sure you have [Node.js](https://nodejs.org/) installed.
-
-### Installation
-
-Clone the repository and install dependencies:
-
-```sh
-git clone https://github.com/yourusername/react-image-previewer.git
-cd react-image-previewer
-npm install
+export default function App() {
+  return (
+    <ImagePreviewer width={500} height={400}>
+      <ImagePreviewer.ImageInput>
+        {({ onChangeFile }) => <input type="file" onChange={onChangeFile} />}
+      </ImagePreviewer.ImageInput>
+      <ImagePreviewer.DownloadButton>
+        {({ onDownload }) => <button onClick={onDownload}>Download</button>}
+      </ImagePreviewer.DownloadButton>
+    </ImagePreviewer>
+  );
+}
 ```
 
-### Development
+### Example
 
-Run the project in development mode:
+Let's test it [here](https://nidea-image-previewer.netlify.app/).
 
-```sh
-npm run dev
-```
+### Components
 
-### Build
-
-Generate a production build:
-
-```sh
-npm run build
-```
-
-## Technologies Used
-
-- React
-- Vite
-- JavaScript (ES6+)
-- CSS
+- `<ImagePreviewer>`: Main wrapper component.
+- `<ImagePreviewer.ImageInput>`: Handles file selection.
+- `<ImagePreviewer.BlobButton>`: Provides access to the image blob.
+- `<ImagePreviewer.DownloadButton>`: Enables image downloading.
 
 ## License
 
-This project is licensed under the MIT License.
-
----
-
-Feel free to contribute or suggest improvements!
-
+This project is licensed under the MIT License. Use it, break it, improve it!
