@@ -3,8 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 
-const devMode = process.env.NODE_ENV === "development";
-
 export default [
   {
     input: "src/index.jsx",
@@ -30,8 +28,6 @@ export default [
           module: true,
           toplevel: true,
           unsafe_arrows: true,
-          drop_console: !devMode,
-          drop_debugger: !devMode,
         },
       }),
     ],

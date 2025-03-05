@@ -1,6 +1,6 @@
 {
   "name": "nidea-react-image-previewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "publish": "rm -rf ./dist/ && mkdir dist && rollup -c"
