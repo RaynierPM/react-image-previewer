@@ -149,7 +149,7 @@ ImagePreviewer.propTypes = {
  * @returns
  */
 // eslint-disable-next-line react/display-name
-ImagePreviewer.processBlobButton = ({ children: Children }) => {
+ImagePreviewer.ProcessBlobButton = ({ children: Children }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const context = useContext(PreviewerContext);
 
@@ -164,7 +164,7 @@ ImagePreviewer.processBlobButton = ({ children: Children }) => {
   );
 };
 
-ImagePreviewer.processBlobButton.propTypes = {
+ImagePreviewer.ProcessBlobButton.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
