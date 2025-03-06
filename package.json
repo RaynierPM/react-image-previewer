@@ -2,9 +2,7 @@
   "name": "nidea-react-img-preview",
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "prepublish": "rm -rf ./dist/ && mkdir dist && rollup -c"
-  },
+  "scripts": {},
   "dependencies": {
     "nidea-image-previewer-core": "^1.0.0",
     "prop-types": "^15.8.1",
@@ -12,14 +10,10 @@
     "react-dom": "^19.0.0"
   },
   "main": "./src/index.jsx",
-  "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.4",
-    "@rollup/plugin-commonjs": "^28.0.2",
-    "@rollup/plugin-node-resolve": "^16.0.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "globals": "^15.14.0",
-    "rollup": "^4.34.9"
-  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "description": "A React-based image previewer built with Vite. This project allows users to upload images and preview them on a canvas with interactive features.",
   "repository": {
     "type": "git",
@@ -28,12 +22,16 @@
   "keywords": [
     "previewer",
     "react",
-    "canvas"
+    "canvas",
+    "images"
   ],
   "author": "RaynierPM",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RaynierPM/react-image-previewer/issues"
   },
-  "homepage": "https://github.com/RaynierPM/react-image-previewer#readme"
+  "homepage": "https://github.com/RaynierPM/react-image-previewer#readme",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
 }

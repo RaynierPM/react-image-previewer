@@ -149,7 +149,7 @@ ImagePreviewer.propTypes = {
  * @returns
  */
 // eslint-disable-next-line react/display-name
-ImagePreviewer.BlobButton = ({ children: Children }) => {
+ImagePreviewer.processBlobButton = ({ children: Children }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const context = useContext(PreviewerContext);
 
@@ -164,14 +164,14 @@ ImagePreviewer.BlobButton = ({ children: Children }) => {
   );
 };
 
-ImagePreviewer.BlobButton.propTypes = {
+ImagePreviewer.processBlobButton.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
 /**
  *
  * @param {Object} props
- * @param {({loadBlob}:{onDownload: () => Promise<Blob>}) => import('react').ReactElement | import('react').ReactElement} props.children
+ * @param {({onDownload}:{onDownload: () => Promise<Blob>}) => import('react').ReactElement | import('react').ReactElement} props.children
  * @returns
  */
 // eslint-disable-next-line react/display-name
