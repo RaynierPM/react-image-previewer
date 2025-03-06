@@ -143,7 +143,7 @@ ImagePreviewer.propTypes = {
  *
  * @param {Object} props
  * @param {((
- *  {loadBlob}:{loadBlob: () => Promise<Blob>}
+ *  {getBlob}:{getBlob: () => Promise<Blob>}
  * ) => import('react').ReactElement) |
  * import('react').ReactElement } props.children
  * @returns
@@ -158,7 +158,7 @@ ImagePreviewer.ProcessBlobButton = ({ children: Children }) => {
   }
 
   return typeof Children === "function" ? (
-    <Children loadBlob={context.loadBlob} />
+    <Children getBlob={context.loadBlob} />
   ) : (
     Children
   );
