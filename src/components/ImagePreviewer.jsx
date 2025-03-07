@@ -103,6 +103,7 @@ export default function ImagePreviewer({
     >
       <div
         style={{
+          maxWidth: "100%",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -113,6 +114,7 @@ export default function ImagePreviewer({
             display: "flex",
             justifyContent: "center",
             margin: "10px 5px",
+            width: "100%",
           }}
         >
           <canvas
