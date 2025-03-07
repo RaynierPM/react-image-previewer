@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
-import { ImagePreviewer as CanvasImagePreviewer } from "nidea-image-previewer-core";
+import { ImagePreviewer as CanvasImagePreviewer } from "./../../../image-previewer/core/index";
 
 /**
  * @typedef PreviewerContext
@@ -49,6 +49,8 @@ export default function ImagePreviewer({
       imagePreviewer.current = new CanvasImagePreviewer(canvas, {
         withCrosshair: showCrosshair,
         crossHairRadius: crosshairRadius,
+        width,
+        height,
       });
 
       imagePreviewer.current.drawGrid();
@@ -67,7 +69,7 @@ export default function ImagePreviewer({
 
   useEffect(() => {
     imagePreviewer.current.dimensions = { width, height };
-    imagePreviewer.current.refreshImage();
+    imagePreviewer.current.drawPreview();
   }, [width, height]);
 
   useEffect(() => {
@@ -75,7 +77,7 @@ export default function ImagePreviewer({
       crossHairRadius: crosshairRadius,
       withCrosshair: showCrosshair,
     };
-    imagePreviewer.current.refreshImage();
+    imagePreviewer.current.drawPreview();
   }, [showCrosshair, crosshairRadius]);
 
   /** @type {() => Promise<Blob>} */
