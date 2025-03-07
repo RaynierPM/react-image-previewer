@@ -1,6 +1,6 @@
 {
   "name": "nidea-react-img-preview",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "publish:package": "rm -rf dist && mkdir dist && tsc && npm publish"

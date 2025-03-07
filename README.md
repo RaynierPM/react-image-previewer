@@ -18,6 +18,18 @@ export default function App() {
       <ImagePreviewer.DownloadButton>
         {({ onDownload }) => <button onClick={onDownload}>Download</button>}
       </ImagePreviewer.DownloadButton>
+      <ImagePreviewer.ProcessBlobButton>
+        {({ getBlob }) => (
+          <button
+            onClick={async () => {
+              const file = await getBlob(); // Blob | undefined
+              // Do some stuff
+            }}
+          >
+            Make some stuff
+          </button>
+        )}
+      </ImagePreviewer.ProcessBlobButton>
     </ImagePreviewer>
   );
 }
@@ -31,7 +43,7 @@ Let's test it [here](https://nidea-image-previewer.netlify.app/).
 
 - `<ImagePreviewer>`: Main wrapper component.
 - `<ImagePreviewer.ImageInput>`: Handles file selection.
-- `<ImagePreviewer.BlobButton>`: Provides access to the image blob.
+- `<ImagePreviewer.ProcessBlobButton>`: Provides access to the image blob.
 - `<ImagePreviewer.DownloadButton>`: Enables image downloading.
 
 ## License
