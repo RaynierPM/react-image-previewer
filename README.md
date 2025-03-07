@@ -1,13 +1,13 @@
-# Nidea React Image Viewer
+# Nidea react iViewer
 
 The React wrapper simplifies integration by providing context-based API access.
 
-This wrapper is based on this [package](https://npmjs.com/package/nidea-image-previewer-core).
+This wrapper is based on this [package](https://npmjs.com/package/nidea-iviewer)!
 
 ### Usage
 
 ```jsx
-import ImagePreviewer from "nidea-image-previewer-core/react";
+import { ImagePreviewer } from "nidea-iviewer";
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
               // Do some stuff
             }}
           >
-            Make some stuff
+            Do something!
           </button>
         )}
       </ImagePreviewer.ProcessBlobButton>

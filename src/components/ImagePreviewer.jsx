@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
-import { ImagePreviewer as CanvasImagePreviewer } from "./../../../image-previewer/core/index";
+import { ImagePreviewer as CanvasImagePreviewer } from "nidea-iviewer";
 
 /**
  * @typedef PreviewerContext
