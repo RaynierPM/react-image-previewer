@@ -68,16 +68,20 @@ export default function ImagePreviewer({
   }, [image]);
 
   useEffect(() => {
-    imagePreviewer.current.dimensions = { width, height };
-    imagePreviewer.current.drawPreview();
+    if (imagePreviewer.current) {
+      imagePreviewer.current.dimensions = { width, height };
+      imagePreviewer.current.drawPreview();
+    }
   }, [width, height]);
 
   useEffect(() => {
-    imagePreviewer.current.options = {
-      crossHairRadius: crosshairRadius,
-      withCrosshair: showCrosshair,
-    };
-    imagePreviewer.current.drawPreview();
+    if (imagePreviewer.current) {
+      imagePreviewer.current.options = {
+        crossHairRadius: crosshairRadius,
+        withCrosshair: showCrosshair,
+      };
+      imagePreviewer.current.drawPreview();
+    }
   }, [showCrosshair, crosshairRadius]);
 
   /** @type {() => Promise<Blob>} */
