@@ -114,7 +114,6 @@ export default function ImagePreviewer({
             display: "flex",
             justifyContent: "center",
             margin: "10px 5px",
-            width: "100%",
           }}
         >
           <canvas
