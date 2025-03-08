@@ -1,6 +1,6 @@
 {
   "name": "nidea-react-iviewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "publish:package": "rm -rf dist && mkdir dist && tsc && npm publish"
